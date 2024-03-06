@@ -1,0 +1,184 @@
+/* #region Commons */
+:root{
+    --light-green:#adff2e;
+    --button:#daa521;
+    --bg-main:#141922;
+    --bg-footer:#282828;
+    --bg-profile:#808080;
+    --bg-plus:#a3a3a3;
+    --bg-icon:#d2d2d2;
+    --color-text:#717171;
+    --bg-upgrade:#0e1119;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:var(--color-text);
+    font-family:"Roboto", sans-serif ;
+}
+body{
+    background-color: #0e1119;
+}
+
+/* #endregion Commons */
+
+/* #Utilities */
+.text{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.c-white{
+    color: white;
+}
+
+.icon{
+    background-color: var(--bg-icon);
+    color: black;
+    padding: 8px;
+    margin: 5px 5px 5px 20px;
+    font-size: 1.4rem;
+}
+
+ul{
+    list-style: none;
+}
+
+.title{
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 18px;
+}
+a{
+    text-decoration: none;
+}
+
+.item{
+    padding-left: 20px;
+}
+.image{
+    width: 15%;
+    vertical-align: middle;
+}
+
+.button{
+    border-radius: 25px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+/* #endregion Utilities */
+
+/* #region sidebar */
+.sidebar{
+    background-color: black;
+    width: 15%;
+    position: fixed;
+    height: calc(100vh - 10%);
+}
+
+.sidebar>.logo{
+    width: 70%;
+    padding: 20px;
+}
+
+.menu{
+  margin-bottom: 20px;  
+}
+
+.menu li{
+    margin:10px 0;
+}
+
+.menu li:first-child{
+    border-left: 5px solid var(--light-green);
+}
+
+.create{
+    margin-bottom:1rem;
+}
+.playlists-created li{
+    padding-bottom: 30px;
+}
+
+.install{
+    border-bottom: 2px solid var(--bg-icon);
+    padding-bottom: 1rem;
+    margin: 0 18px;
+}
+.install>i{
+    padding: 4px;
+    border-radius: 50%;
+    border: 1px solid var(--bg-icon);
+    color: var(--bg-icon);
+    font-size: 12px;
+    vertical-align: bottom;
+}
+.account>.image{
+    border-radius: 50%;
+    background-color: var(--bg-profile);
+    margin: 10px 10px 10px 18px;
+}
+.account>.text{
+    color: white;
+}
+
+.down{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* #endregion sidebar */
+
+/* #region main */
+#site-main{
+    float: right;
+    background-color: var(--bg-main);
+    width: 85%;
+}
+.upgrade-button{
+    position: fixed;
+    background-color: var(--bg-upgrade);
+    width: 100%;
+    height: 8%;
+}
+
+/* #endregion main */
+
+/* #region Hover */
+.text:hover{
+    color: white;
+}
+
+.upgrade-button>.button:hover{
+    font-size: 1.2rem;
+}
+.upgrade-button>.button:active{
+    border: 1px solid var(--button);
+    color: var(--button);
+}
+
+/* #endregion Hover */
+
+/* #region Active */
+
+.upgrade-button>.button:active{
+    border: 1px solid var(--button);
+    color: var(--button);
+}
+
+/* #endregion Active */
+
+
+
+
+
+
+
+
