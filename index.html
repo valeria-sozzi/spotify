@@ -20,148 +20,184 @@
     />
   </head>
   <body>
-    <div class="sidebar">
-      <div class="logo">
-        <img src="./assets/img/logo.svg" alt="" />
-      </div>
-      <div class="menu">
-        <ul>
-          <li class="item">
-            <a href="">
-              <img src="./assets/img/home.svg" class="image" alt="" />
-              <span class="text c-white">Home</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="">
-              <img src="./assets/img/search.svg" class="image" alt="" />
-              <span class="text">Cerca</span>
-            </a>
-          </li>
-          <li class="item">
-            <a href="">
-              <img src="./assets/img/libreria.svg" class="image" alt="" />
-              <span class="text">La tua libreria</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="playlist">
-        <h2 class="title">playlist</h2>
-        <div class="create">
-          <a href="">
-            <i class="fa-solid fa-plus icon"></i>
-            <span class="text">Crea Playlist</span>
-          </a>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="./assets/img/logo.svg" alt="" />
         </div>
-        <div class="playlists-created">
+        <div class="menu">
           <ul>
-            <li class="item"><a href="" class="text">Nome Playlist</a></li>
-            <li class="item"><a href="" class="text">Nome Playlist</a></li>
-            <li class="item"><a href="" class="text">Nome Playlist</a></li>
-            <li class="item"><a href="" class="text">Nome Playlist</a></li>
-            <li class="item"><a href="" class="text">Nome Playlist</a></li>
-            <li class="item"><a href="" class="text">Nome Playlist</a></li>
-            <li class="item"><a href="" class="text">Nome Playlist</a></li>
+            <li class="item">
+              <a href="">
+                <img src="./assets/img/home.svg" class="image" alt="" />
+                <span class="text c-white hw">Home</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./assets/img/search.svg" class="image" alt="" />
+                <span class="text hw">Cerca</span>
+              </a>
+            </li>
+            <li class="item">
+              <a href="">
+                <img src="./assets/img/libreria.svg" class="image" alt="" />
+                <span class="text hw">La tua libreria</span>
+              </a>
+            </li>
           </ul>
         </div>
-      </div>
-      <div class="down">
-        <div class="install">
-          <i class="fa-solid fa-arrow-down"></i>
-          <span class="text">Installa app</span>
+        <div class="playlist">
+          <h2 class="title">playlist</h2>
+          <div class="create">
+            <a href="">
+              <i class="fa-solid fa-plus icon"></i>
+              <span class="text hw">Crea Playlist</span>
+            </a>
+          </div>
+          <div class="playlists-created">
+            <ul>
+              <li class="item"><a href="" class="text hw">Nome Playlist</a></li>
+              <li class="item"><a href="" class="text hw">Nome Playlist</a></li>
+              <li class="item"><a href="" class="text hw">Nome Playlist</a></li>
+              <li class="item"><a href="" class="text hw">Nome Playlist</a></li>
+              <li class="item"><a href="" class="text hw">Nome Playlist</a></li>
+              <li class="item"><a href="" class="text hw">Nome Playlist</a></li>
+              <li class="item"><a href="" class="text hw">Nome Playlist</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="account">
-          <img src="./assets/img/profile.svg" class="image" alt="" />
-          <span class="text">John Doe</span>
+        <div class="down">
+          <div class="install">
+            <i class="fa-solid fa-arrow-down"></i>
+            <span class="text hw">Installa app</span>
+          </div>
+          <div class="account">
+            <img src="./assets/img/profile.svg" class="image" alt="" />
+            <span class="text">John Doe</span>
+          </div>
         </div>
       </div>
+      <!--/sidebar -->
+      <main id="site-main">
+        <div class="upgrade-button">
+          <button class="button">effettua l'upgrade</button>
+        </div>
+        <div class="body">
+          <nav>
+            <ul class="navbar">
+              <li class="services">
+                <a href="" class="hw under">IN EVIDENZA</a>
+              </li>
+              <li class="services"><a href="" class="hw">PODCAST</a></li>
+              <li class="services"><a href="" class="hw">CLASSIFICHE</a></li>
+              <li class="services"><a href="" class="hw">GENERI E MODA </a></li>
+              <li class="services"><a href="" class="hw">NUOVE USCITE</a></li>
+              <li class="services"><a href="" class="hw">SCOPRI</a></li>
+            </ul>
+          </nav>
+          <!-- /navbar -->
+
+          <section class="recently">
+            <h1 class="title">Recently played</h1>
+            <div class="row">
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/metal_lifting.jpg" alt="" />
+                  <!-- <i class="fa-regular fa-circle-play invisible"></i> -->
+                </div>
+                <div class="title">Heavy Metal</div>
+                <div class="subtitle">subtitle</div>
+              </div>
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/stranger.jpeg" alt="" />
+                </div>
+                <div class="title">
+                  Stranger Things, Vol.1 (a Netflix Original Series soundtrack)
+                </div>
+                <div class="subtitle">Kyle Dixon & Micheal Stein</div>
+              </div>
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/aquietplace.jpeg" alt="" />
+                </div>
+                <div class="title">A quiet place</div>
+                <div class="subtitle">subtitle</div>
+              </div>
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/split.jpeg" alt="" />
+                </div>
+                <div class="title">Split</div>
+                <div class="subtitle">subtitle</div>
+              </div>
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/cure.jpeg" alt="" />
+                </div>
+                <div class="title">A cure for wellness</div>
+                <div class="subtitle">subtitle</div>
+              </div>
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/sinister.jpeg" alt="" />
+                </div>
+                <div class="title">Sinister</div>
+                <div class="subtitle">subtitle</div>
+              </div>
+            </div>
+          </section>
+          <!-- /section Recently -->
+
+          <section class="personal">
+            <h1 class="title">Creato per John Doe</h1>
+            <div class="caption">
+              Più ascolti, più accurati saranno i suggerimenti.
+            </div>
+            <div class="row">
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/radar.jpeg" alt="" />
+                </div>
+                <div class="title">Heavy Metal</div>
+              </div>
+              <div class="card">
+                <div class="cover">
+                  <img src="./assets/img/mixdaily.jpeg" alt="" />
+                </div>
+                <div class="title">Daily Mix 1</div>
+              </div>
+            </div>
+          </section>
+          <!-- /section personal -->
+
+          <section class="artist">
+            <h1 class="title">Artisti più popolari</h1>
+            <div class="caption">
+              Più ascolti, più accurati saranno i suggerimenti.
+            </div>
+            <div class="row">
+              <div class="card">
+                <div class="cover author">
+                  <img src="./assets/img/youg.jpeg" alt="" />
+                </div>
+                <div class="title">Lana del Rey</div>
+              </div>
+              <div class="card">
+                <div class="cover author">
+                  <img src="./assets/img/einaudi.jpeg" alt="" />
+                </div>
+                <div class="title">Ludovico Einaudi</div>
+              </div>
+            </div>
+          </section>
+          <!-- /section artist -->
+        </div>
+      </main>
+      <!-- /site-main -->
     </div>
-    <!--/sidebar -->
-    <main id="site-main">
-      <div class="upgrade-button">
-        <button class="button">effettua l'upgrade</button>
-      </div>
-      <nav class="navbar"></nav>
-      <section class="row recently">
-        <h1></h1>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-          <div class="subtitle"></div>
-        </div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-          <div class="subtitle"></div>
-        </div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-          <div class="subtitle"></div>
-        </div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-          <div class="subtitle"></div>
-        </div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-          <div class="subtitle"></div>
-        </div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-          <div class="subtitle"></div>
-        </div>
-      </section>
-      <section class="row created">
-        <h1></h1>
-        <div class="caption"></div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-        </div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-        </div>
-      </section>
-      <section class="row artist">
-        <h1></h1>
-        <div class="caption"></div>
-        <div class="card">
-          <div class="author">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-        </div>
-        <div class="card">
-          <div class="cover">
-            <img src="" alt="" />
-          </div>
-          <div class="title"></div>
-        </div>
-      </section>
-    </main>
-    <!-- /site-main -->
+
     <footer id="site-footer">
       <div class="col-left"></div>
       <div class="col-center"></div>

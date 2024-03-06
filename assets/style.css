@@ -22,6 +22,15 @@ body{
     background-color: #0e1119;
 }
 
+.container{
+    height: calc(100vh - 10%);
+    display: flex;
+}
+
+section{
+    margin: 30px 15px;
+}
+
 /* #endregion Commons */
 
 /* #Utilities */
@@ -38,7 +47,7 @@ body{
     background-color: var(--bg-icon);
     color: black;
     padding: 8px;
-    margin: 5px 5px 5px 20px;
+    margin: 5px 5px 5px 10px;
     font-size: 1.4rem;
 }
 
@@ -47,16 +56,17 @@ ul{
 }
 
 .title{
-    text-transform: uppercase;
     color: white;
-    margin: 10px 18px;
+    margin: 10px;
+    font-weight: bold;
 }
+
 a{
     text-decoration: none;
 }
 
 .item{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 .image{
     width: 15%;
@@ -68,9 +78,32 @@ a{
     background-color: transparent;
     border: 1px solid white;
     color: white;
-    padding: 0.5rem 2rem;
+    padding: 0.3rem 2rem;
     font-size: 0.9rem;
     text-transform: uppercase;
+}
+
+.services{
+    padding: 1rem;
+}
+
+.row{
+    display: flex;
+}
+
+.card{
+    width:calc(100% / 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.cover{
+    padding: 10px;
+}
+.cover>img{
+    object-fit: cover;
+    max-width: 100%;
 }
 /* #endregion Utilities */
 
@@ -78,38 +111,40 @@ a{
 .sidebar{
     background-color: black;
     width: 15%;
-    position: fixed;
-    height: calc(100vh - 10%);
 }
 
 .sidebar>.logo{
     width: 70%;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .menu{
-  margin-bottom: 20px;  
+  margin: 20px 0 30px 0;  
 }
 
 .menu li{
-    margin:10px 0;
+    margin: 20px 0;
 }
 
 .menu li:first-child{
     border-left: 5px solid var(--light-green);
 }
+.playlist>.title{
+    text-transform: uppercase;
+}
 
 .create{
-    margin-bottom:1rem;
+    margin-bottom: 20px;
 }
 .playlists-created li{
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 
 .install{
     border-bottom: 2px solid var(--bg-icon);
     padding-bottom: 1rem;
-    margin: 0 18px;
+    margin: 0 10px;
 }
 .install>i{
     padding: 4px;
@@ -122,37 +157,77 @@ a{
 .account>.image{
     border-radius: 50%;
     background-color: var(--bg-profile);
-    margin: 10px 10px 10px 18px;
+    margin: 10px;
 }
 .account>.text{
     color: white;
-}
-
-.down{
-    position: absolute;
-    bottom: 0;
-    left: 0;
 }
 
 /* #endregion sidebar */
 
 /* #region main */
 #site-main{
-    float: right;
     background-color: var(--bg-main);
     width: 85%;
-}
-.upgrade-button{
-    position: fixed;
-    background-color: var(--bg-upgrade);
-    width: 100%;
-    height: 8%;
+
 }
 
+.upgrade-button{
+    background-color: var(--bg-upgrade);
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+
+.body{
+    height: calc(100% - 25%);
+    overflow-y: scroll;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+
+.under {
+    position: relative;
+    padding-bottom: 5px;
+}
+.under:before{
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    bottom: 0;
+    left: 30%;
+    border-bottom: 3px solid var(--light-green);
+}
+
+.author>img{
+    border-radius: 50%;
+}
+
+.subtitle{
+    font-weight: bold;
+}
+
+.caption{
+    margin: 10px;
+}
+
+.cover>.invisible{
+    display: none;
+}
 /* #endregion main */
 
 /* #region Hover */
-.text:hover{
+.hw:hover{
     color: white;
 }
 
