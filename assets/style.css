@@ -83,6 +83,10 @@ a{
     text-transform: uppercase;
 }
 
+.animation{
+    transition: all  0.3s linear;
+}
+
 .services{
     padding: 1rem;
 }
@@ -111,9 +115,11 @@ a{
 .sidebar{
     background-color: black;
     width: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    height: calc(100vh - 130px);
+    position: relative;
+}
+.start{
+    height: 70%;
 }
 
 .sidebar .logo{
@@ -133,12 +139,20 @@ a{
 .menu li:first-child{
     border-left: 5px solid var(--light-green);
 }
+.playlist{
+    height: 70%;
+}
+
 .playlist>.title{
     text-transform: uppercase;
 }
 
 .create{
     margin-bottom: 20px;
+}
+.playlists-created{
+    max-height: 80%;
+    overflow-y: auto;
 }
 .playlists-created li{
     padding-bottom: 35px;
@@ -165,6 +179,12 @@ a{
 .account>.text{
     color: white;
 }
+.down{
+    background-color: black;
+    position:absolute;
+    bottom:10px;
+    left:0;
+}
 
 /* #endregion sidebar */
 
@@ -177,16 +197,15 @@ a{
 .upgrade-button{
     background-color: var(--bg-upgrade);
     width: 100%;
-    height: 8vh;
+    height: 70px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding-right: 1rem;
 }
 
-
 .body{
-    height: calc(100vh - 20vh);
+    height: calc(100vh - 200px);
     overflow-y: scroll;
 }
 
@@ -210,6 +229,9 @@ a{
     border-bottom: 3px solid var(--light-green);
 }
 
+.recently>.row{
+    flex-wrap: nowrap;
+}
 .author>img{
     border-radius: 50%;
 }
@@ -252,7 +274,7 @@ a{
 
 /* #region footer */
 #site-footer{
-    height: 12vh;
+    height: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -280,6 +302,10 @@ a{
     align-items: center;
     row-gap: 1.2rem;
 }
+.col-center>.row{
+    width: 100%;
+    justify-content: center;
+}
 .col-center>.up .item{
     width: 50px;
     text-align: center;
@@ -288,34 +314,27 @@ a{
 .caption-play{
     display: inline-block;
 }
-
-.col-center .bar{
-    width: 450px;
+.bar-time{
+    width: 70%;
+}
+.bar{
     height: 6px;
     background-color: var(--color-text);
     border-radius: 25px;
     position: relative;
 }
+.col-center .bar{
+    width: 100%;
+}
 
-.col-center .time{
-    width: 150px;
+.time{
+    width: 40%;
     height: 6px;
     background-color: white;
     border-radius: 25px;
 }
 .col-right .bar{
-    width: 250px;
-    height: 6px;
-    background-color: var(--color-text);
-    border-radius: 25px;
-    position: relative;
-}
-
-.col-right .time{
-    width: 100px;
-    height: 6px;
-    background-color: white;
-    border-radius: 25px;
+    width: 80%;
 }
 .circle{
     width: 20px;
@@ -325,17 +344,13 @@ a{
     display: none;
 }
 
-.col-center .circle{
+.circle{
     position: absolute;
     top: -8px;
-    left: 140px;
+    left: 38%;
 }
 
-.col-right .circle{
-    position: absolute;
-    top: -8px;
-    left: 90px;
-}
+
 
 /* #endregion footer */
 
@@ -380,6 +395,82 @@ a{
     color: red;
 }
 /* #endregion Active */
+
+/* #region media */
+@media screen and (max-width:1024px) {
+    .card{
+        width:calc(100% / 4);
+    }
+    .recently>.row{
+        flex-wrap: wrap;
+    }
+    .sidebar{
+        width: 20%;
+    }
+    #site-footer .row{
+        align-items: center;
+        column-gap: 0.5rem; 
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .card{
+        width:calc(100% / 3);
+    }
+    .recently>.row{
+        flex-wrap: wrap;
+    }
+    .sidebar{
+        width: 20%;
+    }
+    #site-footer .row{
+        align-items: center;
+        column-gap: 0.3rem; 
+    }
+    .text{
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+    *{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:566px) {
+    .card{
+        width:calc(100% / 2);
+    }
+    .recently>.row{
+        flex-wrap: wrap;
+    }
+    .sidebar{
+        width: 30%;
+    }
+    #site-footer .row{
+        align-items: center;
+        column-gap: 0.3rem; 
+    }
+
+    .text{
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+    *{
+        font-size: 0.8rem;
+    }
+    .col-center>.up .item{
+        width: 30px;
+        text-align: center;
+    }
+    .navbar{
+        flex-wrap: wrap;
+    }
+    .col-left>.row{
+        padding-left: 0.5rem;
+    }
+}
+/* #endregion media */
 
 
 
