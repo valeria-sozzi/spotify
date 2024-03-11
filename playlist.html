@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify</title>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <link rel="stylesheet" href="./assets/playlist-style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -91,17 +91,44 @@
             <i class="fa-solid fa-arrow-down"></i>
             <span class="text hw">Installa app</span>
           </div>
-          <div class="account">
-            <img src="./assets/img/profile.svg" class="image" alt="" />
-            <span class="text">John Doe</span>
-          </div>
         </div>
       </div>
       <!--/sidebar -->
       <main id="site-main">
-        <div class="upgrade-button">
-          <button class="button animation text">effettua l'upgrade</button>
-        </div>
+        <header>
+          <div class="upgrade-button">
+            <div class="left">
+              <a href="./index.html">
+                <button class="arrow">
+                  <i class="fa-solid fa-chevron-left c-white"></i>
+                </button>
+              </a>
+              <button class="arrow">
+                <i class="fa-solid fa-chevron-right c-white"></i>
+              </button>
+            </div>
+            <div class="right">
+              <button class="button animation text upper">upgrade</button>
+              <button class="button animation text">
+                <img src="./assets/img/profile.svg" class="image" alt="" />
+                <span class="c-white">fab_sky_walker</span>
+                <span>
+                  <i class="fa-solid fa-caret-down c-white"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="daily-mix">
+            <img src="./assets/img/mixdaily.jpeg" alt="" />
+            <div class="title-playlist">
+              <div class="pb c-white title">playlist</div>
+              <h1 class="pb c-white name">MyPlaylist #3</h1>
+              <div class="pb c-white sub">
+                fab_sky_walker 9 songs, 34min 45sec
+              </div>
+            </div>
+          </div>
+        </header>
         <div class="body">
           <nav>
             <ul class="navbar">
@@ -207,7 +234,7 @@
                 </div>
                 <div class="text title">Heavy Metal</div>
               </div>
-              <a href="./playlist.html" class="card">
+              <div class="card">
                 <div class="cover">
                   <img src="./assets/img/mixdaily.jpeg" alt="" />
                   <div class="invisible">
@@ -215,7 +242,7 @@
                   </div>
                 </div>
                 <div class="text title">Daily Mix 1</div>
-              </a>
+              </div>
             </div>
           </section>
           <!-- /section personal -->
