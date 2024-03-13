@@ -220,6 +220,7 @@ header{
 }
 .daily-mix>img{
     width: 25%;
+    max-width: 300px;
     padding: 20px;
 }
 
@@ -280,13 +281,14 @@ header{
 }
 .primary{
     width: 43%;
+    align-items: flex-start;
 }
 .col-25>.title{
     color: var(--color-text);
     text-transform: uppercase;
 }
 .primary>.title{
-    transform: translateX(-120%);
+    transform: translateX(150%);
 }
 .primary .image{
     width: 20%;
@@ -583,10 +585,17 @@ header{
         width: 55%;
     }
     .primary{
-        width: calc(100% - 10%);
+        width: 100%;
     }
     .album{
         display: none;
+    }
+    .text{
+        font-size: 0.9rem;
+    }
+    .title-playlist>.sub{
+        font-weight: 400;
+        font-size: 0.7rem;
     }
     .col-left i{
         display: none;
