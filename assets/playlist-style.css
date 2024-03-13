@@ -87,27 +87,13 @@ a{
     display: flex;
 }
 
-.card{
-    width:calc(100% / 6);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-}
-.cover{
-    position: relative;
-}
-.cover>img{
-    object-fit: cover;
-    max-width: 100%;
-}
 /* #endregion Utilities */
 
 /* #region sidebar */
 .sidebar{
     background-color: black;
     width: 15%;
-    height: calc(100vh - 130px);
+    height: calc(100vh - 100px);
     position: relative;
 }
 .start{
@@ -187,8 +173,11 @@ a{
     width: 85%;
 }
 header{
-    height: 420px;
+    height: 350px;
     background-color: var(--bg-header);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .upgrade-button{
     width: 100%;
@@ -227,10 +216,11 @@ header{
 }
 .daily-mix{
     display: flex;
+    align-items: flex-end;
 }
 .daily-mix>img{
-    width: 20%;
-    padding: 10px;
+    width: 25%;
+    padding: 20px;
 }
 
 .title-playlist{
@@ -254,81 +244,74 @@ header{
 }
 
 .body{
-    height: calc(100vh - 200px);
+    height: calc(100vh - 450px);
     overflow-y: scroll;
 }
 
 .navbar{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    margin: 30px 0;
 }
-
-.under {
-    position: relative;
-    padding-bottom: 5px;
-}
-.under:before{
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 1px;
-    bottom: 0;
-    left: 30%;
-    border-bottom: 3px solid var(--light-green);
-}
-
-.recently>.row{
-    flex-wrap: nowrap;
-}
-.author>img{
+.play-green{
     border-radius: 50%;
+    background-color: var(--light-green);
+    padding: 8px 10px 8px 15px;
+    font-size: 1.5rem;
+    text-align: center;
 }
-
-.subtitle{
-    font-weight: bold;
+.play-green>i{
+    color: black;
 }
 
 .caption{
     margin: 10px;
+    font-size: 1.2rem;
+}
+.listen>.row{
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.col-25{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.primary{
+    width: 43%;
+}
+.col-25>.title{
+    color: var(--color-text);
+    text-transform: uppercase;
+}
+.primary>.title{
+    transform: translateX(-120%);
+}
+.primary .image{
+    width: 20%;
+}
+.rn{
+    display: flex;
+    column-gap: 1.5rem;
+    align-items: center;
 }
 
-.cover>.invisible{
-    display: none;
-}
+.finaly{
+    width: 7%;
 
-.invisible>i{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3.5rem;
-}
-.invisible{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top:0;
-    left:0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 2;
-    cursor: pointer;
-}
-
-.author>.invisible{
-    border-radius: 50%;
 }
 /* #endregion main */
 
 /* #region footer */
 #site-footer{
-    height: 130px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 #site-footer .row{
+    height: 100%;
     align-items: center;
     column-gap: 1.5rem; 
 }
@@ -339,7 +322,7 @@ header{
 }
 
 .col-left .image{
-    width: 30%;
+    width: 15%;
 }
 .col-left>.row{
     padding-left: 2rem;
@@ -349,6 +332,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     row-gap: 1.2rem;
 }
 .col-center>.row{
@@ -398,9 +382,6 @@ header{
     top: -8px;
     left: 38%;
 }
-
-
-
 /* #endregion footer */
 
 /* #region Hover */
@@ -428,10 +409,6 @@ header{
 .bar:hover .circle{
     display: block;
 }
-
-.card:hover .invisible{
-    display: block;
-}
 /* #endregion Hover */
 
 /* #region Active */
@@ -447,36 +424,42 @@ header{
 
 /* #region media */
 @media screen and (max-width:1024px) {
-    .card{
-        width:calc(100% / 4);
-    }
     .text{
         font-size: 0.9rem;
-        font-weight: 400;
-    }
-    .recently>.row{
-        flex-wrap: wrap;
+        font-weight: 600;
     }
     .sidebar{
         width: 20%;
+    }
+    .daily-mix>img{
+        width: 35%;
+        padding: 20px;
     }
     #site-footer .row{
         align-items: center;
         column-gap: 0.5rem; 
     }
-
 }
 
 @media screen and (max-width:768px) {
-    .card{
-        width:calc(100% / 3);
+    header{
+        height: 300px;
+    }
+    .body{
+        height: calc(100vh - 400px);
+    }
+    .finaly{
+        display: none;
+    }
+    .pimary{
+        width: 40%;
     }
     #site-footer .row{
         column-gap: 0.3rem; 
     }
     .text{
-        font-size: 0.7rem;
-        font-weight: 400;
+        font-size: 0.8rem;
+        font-weight: 600;
     }
     #site-footer i{
         font-size: 1rem;
@@ -484,19 +467,52 @@ header{
 }
 
 @media screen and (max-width:566px) {
-    .card{
-        width:calc(100% / 2);
+    header{
+        height: 250px;
+        flex-direction: column;
+        justify-content: space-around;
     }
-    .text{
+    .arrow{
+        font-size: 0.7rem;
+    }
+    .left,
+    .right{
+        display: flex;
+        flex-direction: column;
+    }
+    .right{
+        align-items: flex-end;
+    }
+    .daily-mix>img{
+        padding: 10px;
+    }
+    .title-playlist>.title{
         font-size: 1rem;
-        font-weight: 400;
     }
-    .navbar .text,
-    #site-footer .text{
+    .title-playlist>.name{
+        font-size: 1.5rem;
+    }
+    .pb{
+        padding-bottom: 10px;
+    }
+    .body{
+        height: calc(100vh - 350px);
+    }
+    .date{
+        display: none;
+    }
+    .col-25{
+        width: 35%;
+    }
+    .primary{
+        width: 65%;
+    }
+    
+    .text{
         font-size: 0.7rem;
     }
     #site-footer i{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .sidebar{
         width: 30%;
@@ -512,20 +528,23 @@ header{
         width: 30px;
         text-align: center;
     }
-    .navbar{
-        flex-wrap: wrap;
-    }
     .col-left>.row{
         padding-left: 0.5rem;
     }
 }
 
 @media screen and (max-width:425px) {
-    .card{
-        width:calc(100% / 2);
-    }
     .sidebar{
         width: 15%;
+    }
+    .daily-mix>img{
+        width: 40%;
+    }
+    .title-playlist>.title{
+        font-size: 0.8rem;
+    }
+    .title-playlist>.name{
+        font-size: 1.2rem;
     }
     .navbar .text,
     .upgrade-button .text,
@@ -557,16 +576,17 @@ header{
     .menu .image{
         width: 60%;
     }
-    .account .image{
-        width: 50%;
-    }
+   
 }
 @media screen and (max-width:320px) {
-    .card{
+    .daily-mix>img{
+        width: 55%;
+    }
+    .primary{
         width: calc(100% - 10%);
     }
-    .row{
-        flex-wrap: wrap;
+    .album{
+        display: none;
     }
     .col-left i{
         display: none;
